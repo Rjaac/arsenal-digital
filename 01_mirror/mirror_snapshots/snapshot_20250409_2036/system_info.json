@@ -1,0 +1,230 @@
+{
+    "hostname": "DONA_LAPTOP_ONE",
+    "os": "Windows",
+    "os_version": "10.0.26100",
+    "cpu": "AMD64 Family 23 Model 24 Stepping 1, AuthenticAMD",
+    "ram_gb": 5.95,
+    "disk_total_gb": 892.76,
+    "installed_software": [
+        {
+            "name": "MComix",
+            "version": "3.1.0"
+        },
+        {
+            "name": "Office 16 Click-to-Run Extensibility Component",
+            "version": "16.0.18623.20156"
+        },
+        {
+            "name": "Office 16 Click-to-Run Localization Component",
+            "version": "16.0.14026.20302"
+        },
+        {
+            "name": "Office 16 Click-to-Run Licensing Component",
+            "version": "16.0.18623.20156"
+        },
+        {
+            "name": "MySQL Workbench 8.0 CE",
+            "version": "8.0.41"
+        },
+        {
+            "name": "MySQL Examples and Samples",
+            "version": "8.0.41"
+        },
+        {
+            "name": "Microsoft Visual C++ 2022 X86 Minimum Runtime - 14.42.34438",
+            "version": "14.42.34438"
+        },
+        {
+            "name": "PowerShell 7-x64",
+            "version": "7.5.0.0"
+        },
+        {
+            "name": "Python 3.12.6 pip Bootstrap (64-bit)",
+            "version": "3.12.6150.0"
+        },
+        {
+            "name": "MySQL Shell",
+            "version": "8.0.41"
+        },
+        {
+            "name": "Microsoft Visual Studio Setup WMI Provider",
+            "version": "3.7.2182.35401"
+        },
+        {
+            "name": "MTG Arena",
+            "version": "0.1.8205"
+        },
+        {
+            "name": "Python 3.12.6 Development Libraries (64-bit)",
+            "version": "3.12.6150.0"
+        },
+        {
+            "name": "Python 3.12.6 Test Suite (64-bit)",
+            "version": "3.12.6150.0"
+        },
+        {
+            "name": "Python 3.12.6 Documentation (64-bit)",
+            "version": "3.12.6150.0"
+        },
+        {
+            "name": "Python 3.12.6 Standard Library (64-bit)",
+            "version": "3.12.6150.0"
+        },
+        {
+            "name": "Microsoft Visual C++ 2013 x64 Minimum Runtime - 12.0.40664",
+            "version": "12.0.40664"
+        },
+        {
+            "name": "MySQL Installer",
+            "version": "1.6.13.0"
+        },
+        {
+            "name": "MySQL Router 8.0",
+            "version": "8.0.41"
+        },
+        {
+            "name": "Microsoft Visual C++ 2022 X64 Additional Runtime - 14.42.34438",
+            "version": "14.42.34438"
+        },
+        {
+            "name": "Microsoft .NET Host FX Resolver - 8.0.15 (x86)",
+            "version": "64.60.31149"
+        },
+        {
+            "name": "Python 3.12.6 Executables (64-bit)",
+            "version": "3.12.6150.0"
+        },
+        {
+            "name": "Python 3.12.6 Add to Path (64-bit)",
+            "version": "3.12.6150.0"
+        },
+        {
+            "name": "Transmission 4.0.6 (38c164933e) (x64)",
+            "version": "4.0.6"
+        },
+        {
+            "name": "Python 3.13.0 Add to Path (64-bit)",
+            "version": "3.13.150.0"
+        },
+        {
+            "name": "Python 3.13.0 Standard Library (64-bit)",
+            "version": "3.13.150.0"
+        },
+        {
+            "name": "Python 3.13.0 Tcl/Tk Support (64-bit)",
+            "version": "3.13.150.0"
+        },
+        {
+            "name": "Suporte para Aplica\u2021\u00e4es Apple (64-bits)",
+            "version": "8.7"
+        },
+        {
+            "name": "Microsoft Visual C++ 2022 X64 Minimum Runtime - 14.42.34438",
+            "version": "14.42.34438"
+        },
+        {
+            "name": "Python 3.13.0 Development Libraries (64-bit)",
+            "version": "3.13.150.0"
+        },
+        {
+            "name": "Python 3.13.0 Core Interpreter (64-bit)",
+            "version": "3.13.150.0"
+        },
+        {
+            "name": "Node.js",
+            "version": "22.14.0"
+        },
+        {
+            "name": "Google Chrome",
+            "version": "135.0.7049.42"
+        },
+        {
+            "name": "Microsoft Visual C++ 2013 x64 Additional Runtime - 12.0.40664",
+            "version": "12.0.40664"
+        },
+        {
+            "name": "Python 3.13.0 pip Bootstrap (64-bit)",
+            "version": "3.13.150.0"
+        },
+        {
+            "name": "Python 3.13.0 Executables (64-bit)",
+            "version": "3.13.150.0"
+        },
+        {
+            "name": "Microsoft .NET Host - 8.0.15 (x86)",
+            "version": "64.60.31149"
+        },
+        {
+            "name": "plugin Autentica\u2021\u00c6o.Gov",
+            "version": "2.0.92"
+        },
+        {
+            "name": "Paint.NET",
+            "version": "5.1.7"
+        },
+        {
+            "name": "MySQL Server 8.0",
+            "version": "8.0.41"
+        },
+        {
+            "name": "Python 3.12.6 Core Interpreter (64-bit)",
+            "version": "3.12.6150.0"
+        },
+        {
+            "name": "Windows SDK AddOn",
+            "version": "10.1.0.0"
+        },
+        {
+            "name": "Suporte para Aplica\u2021\u00e4es Apple (32-bits)",
+            "version": "8.7"
+        },
+        {
+            "name": "Python 3.12.6 Tcl/Tk Support (64-bit)",
+            "version": "3.12.6150.0"
+        },
+        {
+            "name": "Python Launcher",
+            "version": "3.13.150.0"
+        },
+        {
+            "name": "Microsoft Update Health Tools",
+            "version": "5.72.0.0"
+        },
+        {
+            "name": "Windows Subsystem for Linux",
+            "version": "2.4.13.0"
+        },
+        {
+            "name": "PuTTY release 0.83 (64-bit)",
+            "version": "0.83.0.0"
+        },
+        {
+            "name": "MySQL Documents",
+            "version": "8.0.41"
+        },
+        {
+            "name": "Python 3.13.0 Documentation (64-bit)",
+            "version": "3.13.150.0"
+        },
+        {
+            "name": "Python 3.13.0 Test Suite (64-bit)",
+            "version": "3.13.150.0"
+        },
+        {
+            "name": "Autentica\u2021\u00c6o.Gov 3.13.0 (5496)",
+            "version": "3.13.5496"
+        },
+        {
+            "name": "Microsoft Windows Desktop Runtime - 8.0.15 (x86)",
+            "version": "64.60.31203"
+        },
+        {
+            "name": "Microsoft .NET Runtime - 8.0.15 (x86)",
+            "version": "64.60.31149"
+        },
+        {
+            "name": "Microsoft Visual C++ 2022 X86 Additional Runtime - 14.42.34438",
+            "version": "14.42.34438"
+        }
+    ]
+}

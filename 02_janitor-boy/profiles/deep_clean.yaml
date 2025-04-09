@@ -1,0 +1,40 @@
+profile_name: deep_clean
+
+delete_files:
+  - extension: .tmp
+  - extension: .bak
+  - extension: .log
+    older_than_days: 30
+  - path_contains: "\\Temp\\"
+  - duplicate_detection: true
+
+uninstall_rules:
+  blacklist:
+    - "McAfee"
+    - "Driver Booster"
+    - "Ask Toolbar"
+    - "PC Optimizer Pro"
+    - "Advanced SystemCare"
+    - "WinZip"
+    - "CCleaner"
+    - "IObit"
+    - "Revo Uninstaller"
+    - "MySql"
+  keyword_match:
+    - "toolbar"
+    - "assistant"
+    - "trial"
+    - "updater"
+  max_unused_days: 180
+  min_size_mb: 200
+  functional_duplicates: true
+
+update_rules:
+  enabled: true
+  priority_list:
+    - "Python"
+    - "Git"
+    - "Firefox"
+  sources:
+    - "winget"
+    - "official"
