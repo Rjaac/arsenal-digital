@@ -1,12 +1,12 @@
-# mirror_main.py
+# warden_main.py
 # Created: 2025-04-10
 # Author: ChatGPT / Marty
 
 # Description:
-# This script is responsible for creating snapshots of the system, monitoring installed software,
-# and generating reports to track changes in files.
+# This script is responsible for scanning the monitored files, checking for modifications or dangerous permissions,
+# and generating reports for the janitor process.
 #
-# Path: C:\Users\ricar\Projects\Laptop\SysAdminTools\01_mirror\mirror_main.py
+# Path: C:\Users\ricar\Projects\Laptop\SysAdminTools\03_warden\warden_main.py
 
 import os
 import json
@@ -22,7 +22,7 @@ os.makedirs(os.path.join(BASE_DIR, 'logs'), exist_ok=True)
 CONFIG_PATH = "config.yaml"
 WATCHLIST_PATH = "rules/watchlist.json"
 BASELINE_PATH = "logs/baseline_hashes.json"
-LOG_FILE = os.path.join(BASE_DIR, 'logs', 'mirror_log.txt')
+LOG_FILE = os.path.join(BASE_DIR, 'logs', 'warden_log.txt')
 
 # Setup logging
 logging.basicConfig(
@@ -95,7 +95,7 @@ def export_scan_report(timestamp, results):
 
     # Export Markdown
     with open(md_path, 'w', encoding='utf-8') as f_md:
-        f_md.write(f"## Mirror Scan Report - {timestamp}
+        f_md.write(f"## Warden Scan Report - {timestamp}
 
 ")
         f_md.write("| File Path | Status | Previous Hash | Current Hash | Permissions |
@@ -110,10 +110,32 @@ def export_scan_report(timestamp, results):
     desktop_logs = os.path.join(os.path.expanduser("~"), "Desktop", "logs")
     os.makedirs(desktop_logs, exist_ok=True)
     dtstamp = timestamp.strftime("%d%m%y%H%M")
-    desktop_report = os.path.join(desktop_logs, f"mirror_log_{dtstamp}.md")
+    desktop_report = os.path.join(desktop_logs, f"warden_log_{dtstamp}.md")
     with open(desktop_report, 'w', encoding='utf-8') as f:
         with open(md_path, 'r', encoding='utf-8') as original:
             f.write(original.read())
+
+    # Generate janitor-boy instructions
+    actions = []
+    for path, data in results["files"].items():
+        if data["permissions"] in ["777", "writable"]:
+            actions.append({
+                "path": path,
+                "issue": "dangerous_permissions",
+                "suggestion": "set to 644"
+            })
+        if data["status"] == "modified":
+            actions.append({
+                "path": path,
+                "issue": "modified",
+                "suggestion": "verify integrity"
+            })
+    janitor_payload = {
+        "timestamp": timestamp.strftime("%Y-%m-%d %H:%M:%S"),
+        "actions": actions
+    }
+    with open(jb_path, 'w', encoding='utf-8') as f_jb:
+        json.dump(janitor_payload, f_jb, indent=2)
 
 def monitor_files(watchlist):
     previous_hashes = load_previous_hashes(BASELINE_PATH)
@@ -154,17 +176,17 @@ def monitor_files(watchlist):
         logging.info("No changes detected.")
 
 def main():
-    logging.info("MIRROR started.")
+    logging.info("WARDEN started.")
     config = load_config(CONFIG_PATH)
     watchlist = load_watchlist(WATCHLIST_PATH)
     monitor_files(watchlist)
-    logging.info("MIRROR finished.")
+    logging.info("WARDEN finished.")
 
     # Save a copy of the log file to Desktop/logs
     desktop_logs = os.path.join(os.path.expanduser("~"), "Desktop", "logs")
     os.makedirs(desktop_logs, exist_ok=True)
     dtstamp = datetime.now().strftime("%d%m%y%H%M")
-    log_copy_path = os.path.join(desktop_logs, f"mirror_log_{dtstamp}.txt")
+    log_copy_path = os.path.join(desktop_logs, f"warden_log_{dtstamp}.txt")
     with open(LOG_FILE, 'r', encoding='utf-8') as original_log:
         with open(log_copy_path, 'w', encoding='utf-8') as backup:
             backup.write(original_log.read())
